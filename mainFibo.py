@@ -3,6 +3,8 @@ import timeit
 
 cache = {}
 def fibonacci_3(n):
+    if n<0:
+        raise  ValueError("pene")
     if n < 2:
         return n
     if n in cache:
