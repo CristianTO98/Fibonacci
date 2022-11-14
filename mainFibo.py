@@ -4,7 +4,7 @@ import timeit
 cache = {}
 def fibonacci_3(n):
     if n<0:
-        raise  ValueError("pene")
+        raise  ValueError("error")
     if n < 2:
         return n
     if n in cache:
