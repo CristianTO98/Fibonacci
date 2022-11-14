@@ -1,26 +1,4 @@
 import argparse
-import time
-import timeit
-cache = {}
-def fibonacci_3(n):
-    if n<0:
-        raise  ValueError("error")
-    if n < 2:
-        return n
-    if n in cache:
-        return cache[n]
-    res = fibonacci_3(n-1) + fibonacci_3(n-2)
-    cache[n] = res
-    return res
-
-
-inicio = time.time()
-
-for i in range(100):
-    fibonacci_3(i)
-fin = time.time()
-
-print(fin - inicio)
 
 parser = argparse.ArgumentParser(
                     prog = 'Fibonacci',
@@ -33,3 +11,4 @@ parser.add_argument('nth',type = int, help = "The n-term of the ....")          
 args = parser.parse_args()
 
 print(args.nth)
+
